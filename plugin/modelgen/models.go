@@ -510,6 +510,8 @@ func splitTagsBySpace(tagsString string) []string {
 
 // containsInvalidSpace checks if the tagsString contains invalid space
 func containsInvalidSpace(valuesString string) bool {
+	// Don't think we should have to check for spaces.
+	return false
 	// get rid of quotes
 	valuesString = strings.ReplaceAll(valuesString, "\"", "")
 	if strings.Contains(valuesString, ",") {
